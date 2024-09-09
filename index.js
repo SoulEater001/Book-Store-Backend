@@ -35,7 +35,7 @@ app.use('/books', BooksRoute);
 // Accessing environment variables
 const PORT = 5555;
 const mongoDBURl = process.env.mongoDBURl || 'your-default-mongo-url';
-
+console.log(mongoDBURl)
 mongoose.connect(mongoDBURl).then(() => {
     console.log('App is connected to database');
     app.listen(PORT, () => {
